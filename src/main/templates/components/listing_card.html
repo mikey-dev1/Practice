@@ -1,0 +1,23 @@
+<div>
+  <img width="200px" src="{{ listing.image.url }}" focusable="false" />
+  <div>
+    <h4>{{listing.model}}</h4>
+
+    <div>
+      <img width="20px" border-radius="10" src="{{listing.seller.photo.url}}" />
+    </div>
+    <div>
+      <p>{{ listing.seller.user.username }}</p>
+    </div>
+    <br />
+    <p>{{ listing.description }}</p>
+    <a href="">view</a>
+    {% if listing.seller.user == request.user %}
+    <a type="button" href="">Edit</a>
+    {% endif %}
+  </div>
+  <small>{{ listing.updated_at }}</small>
+  <button>
+   like
+  </button>
+</div>

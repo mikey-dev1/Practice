@@ -1,0 +1,7 @@
+<form action="" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div>{{ listing_form.as_p }}</div>
+</br>
+  <div>{{ location_form.as_p }}</div>
+  <button type='summit'>save</button>
+</form>

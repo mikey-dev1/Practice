@@ -1,0 +1,71 @@
+{% load static %} {% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook --log in or sign up</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/facebook.png' %}"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <img class="main-image" src="{% static 'images/facebook.svg' %}" alt="" />
+      <div class="mobile-tab">
+        <img src="{% static 'images/facebook.svg' %}" alt="afjfajfaf" />
+      </div>
+      <h2>
+        Facebook helps you connect and share with the people in your life.
+      </h2>
+    </div>
+    <div class="form-container">
+      <form action="" method="post">
+        {% csrf_token %} 
+        {{ login_form }}
+        <div class="input-card">
+          <input type="text" placeholder="Email address or phone number" />
+        </div>
+        <div class="input-card">
+          <input type="password" placeholder="Password" id="password" />
+          <div id="toggle" onclick="ShowHide()"></div>
+        </div>
+        <div class="login-card">
+          <button type="submit">Log in</button>
+        </div>
+        <div class="forgotten-card">
+          <a href="">Forgotten password?</a>
+        </div>
+        <div class="rule">
+          <hr />
+        </div>
+        <div class="create-account">
+          <button>Create New Account</button>
+        </div>
+      </form>
+      <div class="sub-card">
+        <a href="">Create a Page</a>
+        for a celebrity, brand or business.
+      </div>
+    </div>
+  </body>
+  <script>
+    var password = document.getElementById("password");
+    var toggle = document.getElementById("toggle");
+
+    function ShowHide() {
+      if (password.type === "password") {
+        password.setAttribute("type", "text");
+        toggle.classList.add("hide");
+      } else {
+        password.setAttribute("type", "password");
+        toggle.classList.remove("hide");
+      }
+    }
+  </script>
+</html>

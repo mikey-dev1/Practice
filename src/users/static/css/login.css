@@ -1,0 +1,209 @@
+* {
+ box-sizing: border-box;
+}
+
+body {
+ min-height: 100vh;
+ background: #f0f2f5;
+ color: #1c1e21;
+ direction: ltr;
+ line-height: 1.34;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin: 0;
+ padding: 0 27px;
+}
+
+.main {
+ margin-right: 20px;
+ margin-bottom: 80px;
+ width: 500px;
+}
+
+.main img {
+ height: 106px;
+ margin: 0;
+}
+
+.mobile-tab {
+ display: none;
+}
+
+.main h2 {
+ position: relative;
+ top: -40px;
+ font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+ font-size: 28px;
+ font-weight: normal;
+ line-height: 32px;
+
+ padding-left: 22px;
+}
+
+
+form {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ background-color: #fff;
+ border: none;
+ border-radius: 8px;
+ box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+ box-sizing: border-box;
+ padding: 20px 0 28px;
+ width: 396px;
+
+
+}
+
+.input-card,
+.login-card {
+ width: 364px;
+ display: flex;
+ margin: 8px 5px;
+}
+
+.input-card input {
+ width: 100%;
+ padding: 14px 16px;
+ border-radius: 6px;
+ border: 1px solid #dddfe2;
+ font-size: 17px;
+ font-weight: 500;
+
+}
+
+.input-card input::placeholder {
+ color: gray;
+}
+
+.input-card input:focus {
+ border: transparent;
+ outline: solid #1877f2 1px;
+}
+
+#toggle {
+ position: relative;
+ background: url("{% static 'images/eye-solid.svg' %}") no-repeat;
+ height: 30px;
+ width: 30px;
+ right: 2px;
+ transform: translate(-50%);
+ top: 14px;
+ right: 30px;
+}
+
+#toggle.hide {
+ position: relative;
+ background: url("images/cdnjs/eye-slash-solid.svg") no-repeat;
+ height: 30px;
+ width: 30px;
+ right: 2px;
+ transform: translate(-50%);
+ top: 14px;
+ right: 30px;
+
+}
+
+
+.login-card button {
+ background-color: #1877f2;
+ border: none;
+ border-radius: 6px;
+ font-size: 20px;
+ padding: 14px 0;
+ width: 100%;
+ color: white;
+}
+
+.forgotten-card {
+ margin: 6px 0 9px 0;
+ text-align: center;
+ width: 364px;
+}
+
+.forgotten-card a {
+ color: #1877f2;
+ font-size: 16px;
+ font-weight: 500;
+ text-decoration: none;
+}
+
+.rule {
+ width: 364px;
+ margin-top: 6px;
+}
+
+.rule hr {
+ border: 1px solid #dddfe2;
+}
+
+.create-account {
+ margin-top: 16px;
+ text-align: center;
+ width: 364px;
+}
+
+.create-account button {
+ padding: 14px 20px;
+ background-color: #42b72a;
+ border-radius: 6px;
+ border: none;
+ color: white;
+ font-weight: 600;
+ font-size: 16px;
+}
+
+.create-account button:hover {
+ background-color: green;
+}
+
+.sub-card {
+ width: 100%;
+ margin-top: 15px;
+ text-align: center;
+}
+
+.sub-card a {
+ font-weight: 600;
+ text-decoration: none;
+ color: #1c1e21;
+}
+
+@media screen and (max-width:882px) {
+ body {
+  flex-direction: column;
+ }
+
+ .main {
+  margin: 0;
+  width: 396px;
+ }
+
+ .main-image {
+  display: none;
+ }
+
+ .mobile-tab {
+  display: block;
+  text-align: center;
+ }
+
+ .mobile-tab img {
+  margin: 0;
+  padding: 0;
+ }
+
+ .main h2 {
+  position: unset;
+  top: unset;
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  line-height: unset;
+  margin: 0 0 16px 0;
+  padding-left: 25px;
+
+ }
+}

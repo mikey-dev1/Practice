@@ -1,0 +1,43 @@
+{% extends 'views/main.html' %}
+{% load static %}
+
+
+
+<html>
+{% if messages %}
+{% for message in messages %}
+<div>
+ {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+
+
+
+
+
+{% block 'home' %}
+<section>
+
+<div>
+ <form action='' method='get'>
+  {{listing_filter.form.as_p}}
+  <button action='' type='summit'/>summit</button>
+ </form>
+</div>
+<br>
+<br>
+
+ {% for listing in listing_filter.qs %}
+ {% include 'components/listing_card.html' %}
+ {% endfor %}
+<br>
+<a href='{% url 'list' %}'>list your car</a>
+
+</section>
+
+
+{% endblock  %}
+
+ <h1>{{ request.user.username }}</h2>
+</html>
